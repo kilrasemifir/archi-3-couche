@@ -38,4 +38,9 @@ public class PersonneController {
     public List<Personne> findAllByNom(@PathVariable String nom) {
         return personneService.findAllByNom(nom);
     }
+
+    @GetMapping("niveau/{niveau}")
+    public List<Personne> findallByNiveauDeCompetences_NiveauGreaterThanEqual(@PathVariable int niveau) {
+        return personneService.findAllByNiveauDeCompetences_NiveauGreaterThanEqual(niveau);
+    }
 }

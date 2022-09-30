@@ -7,4 +7,6 @@ import java.util.List;
 public interface PersonneRepository extends MongoRepository<Personne, String> {
 
     List<Personne> findAllByNom(String nom);
+
+    List<Personne> findAllByNiveauDeCompetences_NiveauGreaterThanEqual(int niveau);
 }

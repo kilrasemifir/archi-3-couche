@@ -33,4 +33,8 @@ public class PersonneService {
     public List<Personne> findAllByNom(String nom) {
         return personneRepository.findAllByNom(nom);
     }
+
+    public List<Personne> findAllByNiveauDeCompetences_NiveauGreaterThanEqual(int niveau) {
+        return personneRepository.findAllByNiveauDeCompetences_NiveauGreaterThanEqual(niveau);
+    }
 }
